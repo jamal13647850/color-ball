@@ -19,19 +19,21 @@ document.addEventListener("DOMContentLoaded", event => {
     scoreBox.textContent = 0;
   });
 
-  const startTimer =() => {
-    const timerId = setInterval(() => {
-      time--;
-      timer.textContent = time + " Seconds";
-      time === 0
-        ? (alert("Your final score is: " + scoreBox.textContent),
-          clearInterval(timerId))
-        : null;
-    }, 1000);
-  }
+
 });
 
 //functiond
+const startTimer =() => {
+  const timerId = setInterval(() => {
+    time--;
+    timer.textContent = time + " Seconds";
+    time === 0
+      ? (alert("Your final score is: " + scoreBox.textContent),
+        clearInterval(timerId))
+      : null;
+  }, 1000);
+}
+
 const setBallAndBoxColors = () => {
   const Colors = [getRandomColor(), getRandomColor()];
 
