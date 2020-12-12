@@ -9,21 +9,26 @@ document.addEventListener("DOMContentLoaded", event => {
   const restartBTN = document.getElementById("restartBTN");
 
   setBallAndBoxColors();
-
-  const timerId = setInterval(() => {
-    time--;
-    timer.textContent = time + " Seconds";
-    time === 0
-      ? (alert("Your final score is: " + scoreBox.textContent),
-        clearInterval(timerId))
-      : null;
-  }, 1000);
+  startTimer();
+ 
 
   restartBTN.addEventListener("click", () => {
     setBallAndBoxColors();
+    startTimer();
     time = 60;
     scoreBox.textContent = 0;
   });
+
+  const startTimer =() => {
+    const timerId = setInterval(() => {
+      time--;
+      timer.textContent = time + " Seconds";
+      time === 0
+        ? (alert("Your final score is: " + scoreBox.textContent),
+          clearInterval(timerId))
+        : null;
+    }, 1000);
+  }
 });
 
 //functiond
