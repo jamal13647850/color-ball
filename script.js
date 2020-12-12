@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
 //functiond
 const startTimer =() => {
+  const scoreBox = document.getElementById("score");
   clearInterval(timerId);
   timerId = setInterval(() => {
     time--;
