@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Color Ball</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<div id="leftBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="centerBox">
+			<div id="ball" draggable="true" ondragstart="drag(event)"></div>
+		</div>
+
+		<div id="rightBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	</div>
+	<div class="container2">
+		<span id="timer">60 Seconds</span>
+		<input type="button" value="Restart" id="restartBTN"/>
+		<span id="score">0</span>
+	</div>
+</body>
+
+</html>
