@@ -1,4 +1,5 @@
 let time = 60;
+let timerId;
 document.addEventListener("DOMContentLoaded", event => {
   const ball = document.getElementById("ball");
   const leftBox = document.getElementById("leftBox");
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded", event => {
 
 //functiond
 const startTimer =() => {
-  const timerId = setInterval(() => {
+  clearInterval(timerId);
+  timerId = setInterval(() => {
     time--;
     timer.textContent = time + " Seconds";
     time === 0
